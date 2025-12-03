@@ -1,61 +1,65 @@
 /* Убираем флаг в атрибутах */
-		.leaflet-attribution-flag {
-			display: none !important;
-		}
+.leaflet-attribution-flag {
+    display: none !important;
+}
 
 /* Стили для легенды */
 .legend {
-		.legend {
-			color: #555;
-			padding: 6px 8px;
-			font: 12px Arial, Helvetica, sans-serif;
-			font-weight: bold;
-			background: white;
-			background: rgba(255, 255, 255, 0.8);
-			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-			border-radius: 5px;
-		}
-
-		.legend ul {
-			list-style-type: none;
-			padding: 0;
-			margin: 0;
-			clear: both;
-		}
-
-		.legend li {
-			display: inline-block;
-			width: 30px;
-			height: 22px;
-		}
-
-		.legend .min {
-			float: left;
-			padding-bottom: 5px;
-		}
-
-		.legend .max {
-			float: right;
-		}
+    .legend {
+        color: #555;
+        padding: 6px 8px;
+        font: 12px Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        background: white;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
     }
+
+    .legend ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        clear: both;
+    }
+
+    .legend li {
+        display: inline-block;
+        width: 30px;
+        height: 22px;
+    }
+
+    .legend .min {
+        float: left;
+        padding-bottom: 5px;
+    }
+
+    .legend .max {
+        float: right;
+    }
+}
+
 /* Общие стили */
 * {
-    margin: 0; /* Убирает все внешние отступы у всех элементов (чтобы исключить автоматически проставляемые отступы) */
-    padding: 0; /* Убирает все внутренние отступы у всех элементов (чтобы исключить автоматически проставляемые отступы) */
-    box-sizing: border-box; /* Размеры элемента включают padding и border (т.е. ширина и высота измеряется у всего блока, а не только его содержимого) */
+    margin: 0;
+    /* Убирает все внешние отступы у всех элементов (чтобы исключить автоматически проставляемые отступы) */
+    padding: 0;
+    /* Убирает все внутренние отступы у всех элементов (чтобы исключить автоматически проставляемые отступы) */
+    box-sizing: border-box;
+    /* Размеры элемента включают padding и border (т.е. ширина и высота измеряется у всего блока, а не только его содержимого) */
 }
 
 body {
-    font-family: 'Cormorant Garamond', 'Georgia', serif; 
-    background-color: #fdfaf6; 
-    color: #5c4d3c; 
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    background-color: #fdfaf6;
+    color: #5c4d3c;
     display: flex;
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
     margin: 0;
     /* Текстурированный фон в стиле льняной ткани или старинной бумаги */
-    background-image: 
+    background-image:
         radial-gradient(#e8e1d7 15%, transparent 16%),
         radial-gradient(#e8e1d7 15%, transparent 16%);
     background-size: 60px 60px;
@@ -66,18 +70,24 @@ body {
 
 /* Шапка - как кружевная салфетка на деревянном столе */
 #header {
-    background: linear-gradient(135deg, #f8f2e8 0%, #f0e6d6 100%); /* Градиент кремовых тонов */
-    color: #7a6a5a; /* Цвет специй/корицы */
-    padding: 25px 20px; /* Увеличим немного отступы */
+    background: linear-gradient(135deg, #f8f2e8 0%, #f0e6d6 100%);
+    /* Градиент кремовых тонов */
+    color: #7a6a5a;
+    /* Цвет специй/корицы */
+    padding: 25px 20px;
+    /* Увеличим немного отступы */
     text-align: center;
-    box-shadow: 
-        0 4px 12px rgba(139, 128, 116, 0.15), /* Мягкая тень */
-        inset 0 1px 0 rgba(255, 255, 255, 0.8); /* Светлая внутренняя граница */
+    box-shadow:
+        0 4px 12px rgba(139, 128, 116, 0.15),
+        /* Мягкая тень */
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    /* Светлая внутренняя граница */
     z-index: 100;
     position: relative;
-    border-bottom: 2px solid #e8d9c5; /* Тонкая граница как край кружева */
+    border-bottom: 2px solid #e8d9c5;
+    /* Тонкая граница как край кружева */
     /* Текстурированный фон с легким узором */
-    background-image: 
+    background-image:
         radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.8) 2px, transparent 2px),
         radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.8) 2px, transparent 2px);
     background-size: 40px 40px;
@@ -85,16 +95,20 @@ body {
 
 /* Заголовки 1-го уровня в Шапке */
 #header h1 {
-    font-family: 'Playfair Display', 'Georgia', serif; /* Элегантный шрифт с засечками */
-    font-size: 32px; /* Чуть крупнее для романтичности */
-    font-weight: 600; /* Средняя толщина */
+    font-family: 'Playfair Display', 'Georgia', serif;
+    /* Элегантный шрифт с засечками */
+    font-size: 32px;
+    /* Чуть крупнее для романтичности */
+    font-weight: 600;
+    /* Средняя толщина */
     letter-spacing: 1.5px;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
     margin: 0;
     /* Декоративное оформление */
     display: inline-block;
     padding: 0 20px 10px;
-    border-bottom: 2px dotted #d4b8b8; /* Точечная линия под текстом */
+    border-bottom: 2px dotted #d4b8b8;
+    /* Точечная линия под текстом */
 }
 
 /* Дополнительный элемент для цветочного акцента (если можно добавить HTML) */
@@ -115,15 +129,20 @@ body {
     overflow: hidden;
     min-height: 0;
     position: relative;
-    background-color: #faf7f2; /* Светлый фон, как состаренная бумага */
-    margin: 15px; /* Отступ от краев */
-    border-radius: 8px 8px 0 0; /* Скругленные верхние углы */
-    box-shadow: 
-        inset 0 0 30px rgba(210, 195, 175, 0.3), /* Внутренняя тень для глубины */
-        0 2px 8px rgba(139, 128, 116, 0.1); /* Внешняя мягкая тень */
+    background-color: #faf7f2;
+    /* Светлый фон, как состаренная бумага */
+    margin: 15px;
+    /* Отступ от краев */
+    border-radius: 8px 8px 0 0;
+    /* Скругленные верхние углы */
+    box-shadow:
+        inset 0 0 30px rgba(210, 195, 175, 0.3),
+        /* Внутренняя тень для глубины */
+        0 2px 8px rgba(139, 128, 116, 0.1);
+    /* Внешняя мягкая тень */
     border: 1px solid #e8d9c5;
     /* Тонкий узор в уголках */
-    background-image: 
+    background-image:
         linear-gradient(45deg, transparent 45%, #f0e6d6 45%, #f0e6d6 55%, transparent 55%),
         linear-gradient(-45deg, transparent 45%, #f0e6d6 45%, #f0e6d6 55%, transparent 55%);
     background-position: 0 0, 0 100%, 100% 0, 100% 100%;
@@ -134,41 +153,50 @@ body {
 
 /* Блок карты (левая половина) */
 #map-container {
-    width: 70%; /* Ширина блока map-container относительно блока main-container*/
-	height: 100%; /* Высота блока map-container относительно блока main-container */
-    background-color: #252525; /* Фоновый цвет блока */
-    position: relative; /* Тип позиционирования блока: относительное */
+    width: 70%;
+    /* Ширина блока map-container относительно блока main-container*/
+    height: 100%;
+    /* Высота блока map-container относительно блока main-container */
+    background-color: #252525;
+    /* Фоновый цвет блока */
+    position: relative;
+    /* Тип позиционирования блока: относительное */
 }
 
 /* Непосредственно карта */
 #map {
-    width: 100%; /* Ширина карты относительно блока map-container */
-    height: 100%; /* Карта занимает всю высоту блока map-container */
-    position: relative; /* Тип позиционирования блока: относительное */
-    z-index: 1; /* Уровень перекрытия — ниже других элементов */
+    width: 100%;
+    /* Ширина карты относительно блока map-container */
+    height: 100%;
+    /* Карта занимает всю высоту блока map-container */
+    position: relative;
+    /* Тип позиционирования блока: относительное */
+    z-index: 1;
+    /* Уровень перекрытия — ниже других элементов */
 }
 
 /* Блок текста - как старинная записная книжка */
 #text-container {
     width: 30%;
     height: 100%;
-    background-color: #fefcf8; /* Светлый кремовый фон */
+    background-color: #fefcf8;
+    /* Светлый кремовый фон */
     padding: 30px;
     overflow-y: auto;
     /* Тень как у страницы в книге */
-    box-shadow: 
+    box-shadow:
         -3px 0 8px rgba(210, 195, 175, 0.4),
         inset 10px 0 15px -10px rgba(180, 160, 140, 0.2);
     z-index: 10;
     border-left: 1px solid #e8d9c5;
     position: relative;
     /* Эффект состаренной бумаги с текстурой */
-    background-image: 
+    background-image:
         linear-gradient(90deg, transparent 79px, #f0e6d6 79px, #f0e6d6 81px, transparent 81px),
         linear-gradient(#fefcf8 1.1px, transparent 1.1px);
     background-size: 100% 24px;
     /* Декоративные уголки */
-    background-image: 
+    background-image:
         url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><path d="M5,5 L15,5 Q20,5 20,10 L20,15 Q20,20 15,20 L5,20 Z" fill="%23f0e6d6" opacity="0.3"/></svg>'),
         url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><path d="M30,5 L45,5 Q50,5 50,10 L50,15 Q50,20 45,20 L30,20 Z" fill="%23f0e6d6" opacity="0.3"/></svg>'),
         linear-gradient(90deg, transparent 79px, #f0e6d6 79px, #f0e6d6 81px, transparent 81px),
@@ -188,11 +216,11 @@ body {
     left: 30px;
     right: 30px;
     height: 100%;
-    background: linear-gradient(180deg, 
-        transparent 23px, 
-        rgba(210, 195, 175, 0.1) 23px, 
-        rgba(210, 195, 175, 0.1) 24px, 
-        transparent 24px);
+    background: linear-gradient(180deg,
+            transparent 23px,
+            rgba(210, 195, 175, 0.1) 23px,
+            rgba(210, 195, 175, 0.1) 24px,
+            transparent 24px);
     background-size: 100% 24px;
     pointer-events: none;
     z-index: 0;
@@ -200,7 +228,8 @@ body {
 
 /* Заголовки 2-го уровня в Блоке текста */
 #text-container h2 {
-    color: #9d7161; /* Теплый терракотовый, как сушеные цветы */
+    color: #9d7161;
+    /* Теплый терракотовый, как сушеные цветы */
     margin-bottom: 20px;
     font-size: 24px;
     font-family: 'Playfair Display', 'Georgia', serif;
@@ -250,7 +279,7 @@ body {
     color: #7a6a5a;
     padding: 20px 15px;
     text-align: center;
-    box-shadow: 
+    box-shadow:
         0 -4px 12px rgba(139, 128, 116, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.8);
     font-size: 14px;
@@ -258,14 +287,12 @@ body {
     position: relative;
     border-top: 2px solid #c9b7a3;
     /* Текстура дерева или ткани */
-    background-image: 
-        repeating-linear-gradient(
-            45deg,
+    background-image:
+        repeating-linear-gradient(45deg,
             transparent,
             transparent 10px,
             rgba(255, 255, 255, 0.1) 10px,
-            rgba(255, 255, 255, 0.1) 20px
-        );
+            rgba(255, 255, 255, 0.1) 20px);
 }
 
 /* Текст в подвале с декоративными элементами */
@@ -297,11 +324,11 @@ body {
     transform: translateX(-50%);
     width: 100px;
     height: 5px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #d4a5a5 20%, 
-        #d4a5a5 80%, 
-        transparent 100%);
+    background: linear-gradient(90deg,
+            transparent 0%,
+            #d4a5a5 20%,
+            #d4a5a5 80%,
+            transparent 100%);
     border-radius: 0 0 3px 3px;
     opacity: 0.5;
 }
