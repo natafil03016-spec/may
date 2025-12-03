@@ -64,32 +64,72 @@ body {
     box-shadow: inset 0 0 30px rgba(139, 128, 116, 0.1);
 }
 
-/* Шапка */
+/* Шапка - как кружевная салфетка на деревянном столе */
 #header {
-    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); /* Окраска фона. В данном случае применен градиент (хотя может быть просто цвет) */
-    color: #ffffff; /* Цвет текста */
-    padding: 20px; /* Внутренний отступ вокруг содержимого */
-    text-align: center; /* Выравнивание текста */
-	box-shadow: 0 4px 8px rgba(0,0,0,0.6); /* Тень для визуального отделения от соседних блоков */
-    z-index: 100; /* Уровень перекрытия — поверх большинства других элементов */
-    position: relative; /* Тип позиционирования блока: относительное */
+    background: linear-gradient(135deg, #f8f2e8 0%, #f0e6d6 100%); /* Градиент кремовых тонов */
+    color: #7a6a5a; /* Цвет специй/корицы */
+    padding: 25px 20px; /* Увеличим немного отступы */
+    text-align: center;
+    box-shadow: 
+        0 4px 12px rgba(139, 128, 116, 0.15), /* Мягкая тень */
+        inset 0 1px 0 rgba(255, 255, 255, 0.8); /* Светлая внутренняя граница */
+    z-index: 100;
+    position: relative;
+    border-bottom: 2px solid #e8d9c5; /* Тонкая граница как край кружева */
+    /* Текстурированный фон с легким узором */
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.8) 2px, transparent 2px),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.8) 2px, transparent 2px);
+    background-size: 40px 40px;
 }
 
 /* Заголовки 1-го уровня в Шапке */
 #header h1 {
-    font-family: Montserrat, sans-serif; /* Шрифт для заголовка — Montserrat, затем любые без засечек */
-    font-size: 28px; /* Размер шрифта */
-    font-weight: 700; /* Толщина шрифта */
-    letter-spacing: 1px; /* Разрядка (увеличенное расстояние между буквами) */
+    font-family: 'Playfair Display', 'Georgia', serif; /* Элегантный шрифт с засечками */
+    font-size: 32px; /* Чуть крупнее для романтичности */
+    font-weight: 600; /* Средняя толщина */
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    margin: 0;
+    /* Декоративное оформление */
+    display: inline-block;
+    padding: 0 20px 10px;
+    border-bottom: 2px dotted #d4b8b8; /* Точечная линия под текстом */
 }
 
-/* Блок содержания сайта (блок для карты и текста) */
+/* Дополнительный элемент для цветочного акцента (если можно добавить HTML) */
+#header::after {
+    content: "❀ ❀ ❀";
+    display: block;
+    color: #d4a5a5;
+    font-size: 20px;
+    letter-spacing: 15px;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* Блок содержания сайта - как страница старого дневника */
 #main-container {
-    display: flex; /* Контейнер с flexbox: дочерние блоки (карта и текст) идут в строку */
-    flex: 1; /* Блок занимает всё доступное пространство между header и footer */
-    overflow: hidden; /* содержимое, выходящее за границы блока (за его ширину или высоту), обрезается по границам без прокрутки */
-    min-height: 0; /* установка минимальной высоты flex-контейнера, чтобы избежать его чрезмерного увеличения в зависимости от содержимого */
-    position: relative; /* Тип позиционирования блока: относительное */
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+    position: relative;
+    background-color: #faf7f2; /* Светлый фон, как состаренная бумага */
+    margin: 15px; /* Отступ от краев */
+    border-radius: 8px 8px 0 0; /* Скругленные верхние углы */
+    box-shadow: 
+        inset 0 0 30px rgba(210, 195, 175, 0.3), /* Внутренняя тень для глубины */
+        0 2px 8px rgba(139, 128, 116, 0.1); /* Внешняя мягкая тень */
+    border: 1px solid #e8d9c5;
+    /* Тонкий узор в уголках */
+    background-image: 
+        linear-gradient(45deg, transparent 45%, #f0e6d6 45%, #f0e6d6 55%, transparent 55%),
+        linear-gradient(-45deg, transparent 45%, #f0e6d6 45%, #f0e6d6 55%, transparent 55%);
+    background-position: 0 0, 0 100%, 100% 0, 100% 100%;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+
 }
 
 /* Блок карты (левая половина) */
