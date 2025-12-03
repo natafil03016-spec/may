@@ -148,39 +148,173 @@ body {
     z-index: 1; /* Уровень перекрытия — ниже других элементов */
 }
 
-/* Блок текста (правая половина) */
+/* Блок текста - как старинная записная книжка */
 #text-container {
-    width: 30%; /* Ширина блока text-container относительно блока main-container */
-	height: 100%; /* Высота блока map-container относительно блока main-container */
-    background-color: #2d2d2d; /* Фоновый цвет блока */
-    padding: 30px; /* Внутренний отступ */
-    overflow-y: auto; /* Включить вертикальную прокрутка, если содержимое не помещается в блок */
-    box-shadow: -2px 0 5px rgba(0,0,0,0.3); /* Тень для отделения от карты */
-    z-index: 10; /* Уровень перекрытия — выше карты, но ниже других элементов */
+    width: 30%;
+    height: 100%;
+    background-color: #fefcf8; /* Светлый кремовый фон */
+    padding: 30px;
+    overflow-y: auto;
+    /* Тень как у страницы в книге */
+    box-shadow: 
+        -3px 0 8px rgba(210, 195, 175, 0.4),
+        inset 10px 0 15px -10px rgba(180, 160, 140, 0.2);
+    z-index: 10;
+    border-left: 1px solid #e8d9c5;
+    position: relative;
+    /* Эффект состаренной бумаги с текстурой */
+    background-image: 
+        linear-gradient(90deg, transparent 79px, #f0e6d6 79px, #f0e6d6 81px, transparent 81px),
+        linear-gradient(#fefcf8 1.1px, transparent 1.1px);
+    background-size: 100% 24px;
+    /* Декоративные уголки */
+    background-image: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><path d="M5,5 L15,5 Q20,5 20,10 L20,15 Q20,20 15,20 L5,20 Z" fill="%23f0e6d6" opacity="0.3"/></svg>'),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><path d="M30,5 L45,5 Q50,5 50,10 L50,15 Q50,20 45,20 L30,20 Z" fill="%23f0e6d6" opacity="0.3"/></svg>'),
+        linear-gradient(90deg, transparent 79px, #f0e6d6 79px, #f0e6d6 81px, transparent 81px),
+        linear-gradient(#fefcf8 1.1px, transparent 1.1px);
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20px 20px, 20px 20px, 100% 24px;
+    /* Винтажные линии как в тетради */
+    background-size: 20px 20px, 20px 20px, 100% 24px;
+}
+
+/* Полосы для написания текста (если нужно) */
+#text-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30px;
+    right: 30px;
+    height: 100%;
+    background: linear-gradient(180deg, 
+        transparent 23px, 
+        rgba(210, 195, 175, 0.1) 23px, 
+        rgba(210, 195, 175, 0.1) 24px, 
+        transparent 24px);
+    background-size: 100% 24px;
+    pointer-events: none;
+    z-index: 0;
 }
 
 /* Заголовки 2-го уровня в Блоке текста */
 #text-container h2 {
-    color: #4a9eff; /* Цвет */
-    margin-bottom: 15px; /* Отступ снизу */
-    font-size: 20px; /* Размер шрифта */
+    color: #9d7161; /* Теплый терракотовый, как сушеные цветы */
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d4b8b8;
+    position: relative;
+    z-index: 1;
+}
+
+/* Декоративный элемент рядом с заголовком */
+#text-container h2::before {
+    content: "✿";
+    color: #d4a5a5;
+    margin-right: 10px;
+    font-size: 20px;
 }
 
 /* Абзацы в Блоке текста */
 #text-container p {
-    color: #c0c0c0; /* Цвет */
-	line-height: 1.6; /* Межстрочный интервал */
-    margin-bottom: 15px; /* Отступ снизу */
+    color: #7a6a5a;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0.5px 0.5px 0 rgba(255, 255, 255, 0.8);
+    /* Отступ для строк как в тетради */
+    padding-left: 85px;
+    text-indent: -15px;
 }
 
-/* Подвал */
+/* Первая буква абзаца */
+#text-container p::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #b88b7d;
+    float: left;
+    margin-right: 5px;
+    line-height: 1;
+    margin-top: 5px;
+}
+
+/* Подвал - как деревянная доска или тканевая окантовка */
 #footer {
-    background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); /* Окраска фона. В данном случае применен градиент (хотя может быть просто цвет) */
-    color: #b0b0b0; /* Цвет текста */
-    padding: 15px; /* Внутренний отступ вокруг содержимого */
-    text-align: center; /* Выравнивание текста */
-    box-shadow: 0 -4px 8px rgba(0,0,0,0.6); /* Тень для визуального отделения от соседних блоков */
-    font-size: 14px; /* Размер шрифта */
-    z-index: 100; /* Уровень перекрытия — поверх большинства других элементов (как у шапки) */
-    position: relative; /* Тип позиционирования блока: относительное */
+    background: linear-gradient(135deg, #e8d9c5 0%, #d4c4b0 100%);
+    color: #7a6a5a;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 
+        0 -4px 12px rgba(139, 128, 116, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    z-index: 100;
+    position: relative;
+    border-top: 2px solid #c9b7a3;
+    /* Текстура дерева или ткани */
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(255, 255, 255, 0.1) 10px,
+            rgba(255, 255, 255, 0.1) 20px
+        );
+}
+
+/* Текст в подвале с декоративными элементами */
+#footer p {
+    margin: 0;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Цветочки по бокам текста */
+#footer p::before,
+#footer p::after {
+    content: "❀";
+    color: #b88b7d;
+    margin: 0 10px;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+/* Дополнительный декоративный элемент в подвале */
+#footer::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #d4a5a5 20%, 
+        #d4a5a5 80%, 
+        transparent 100%);
+    border-radius: 0 0 3px 3px;
+    opacity: 0.5;
+}
+
+/* Ссылки в подвале */
+#footer a {
+    color: #9d7161;
+    text-decoration: none;
+    border-bottom: 1px dotted #c9b7a3;
+    transition: all 0.3s ease;
+}
+
+#footer a:hover {
+    color: #7a5a4a;
+    border-bottom: 1px solid #b88b7d;
 }
